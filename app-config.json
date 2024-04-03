@@ -1,0 +1,22 @@
+{
+  "app": {
+    "title": "xin chào",
+    "headerTitle": "lamdemo",
+    "headerColor": "#1843EF",
+    "textColor": "white",
+    "textAlign": "left",
+    "statusBarColor": "#1843EF",
+    "leftButton": "back",
+    "statusBar": "normal",
+    "actionBarHidden": true,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": false,
+    "selfControlLoading": false
+  },
+  "debug": false,
+  "pages": [],
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": [],
+  "template": {}
+}
