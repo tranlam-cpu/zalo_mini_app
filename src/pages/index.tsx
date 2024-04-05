@@ -47,7 +47,11 @@ const HomePage: React.FunctionComponent = () => {
           {swiper?.map((data: any) => {
             return (
               <Swiper.Slide key={data.id}>
-                <img className="rounded-none" src={data.src} alt={data.name} />
+                <img
+                  className="rounded-none object-cover h-[25vh]"
+                  src={data.src}
+                  alt={data.name}
+                />
               </Swiper.Slide>
             );
           })}
@@ -58,7 +62,7 @@ const HomePage: React.FunctionComponent = () => {
         <Input.Search
           label="Label"
           helperText="Helper text"
-          placeholder="tìm kiếm"
+          placeholder="Tìm kiếm..."
           onSearch={(text) => console.log(text)}
         />
       </div>
