@@ -97,3 +97,28 @@ export const fetchDataToCategory = selector({
     ];
   },
 });
+
+//product
+
+export const productState = atom({
+  key: "products",
+  default: [],
+});
+
+export const fetchDataToProduct = selector({
+  key: "fetchDataToProduct",
+  get: () => {
+    return [
+      {
+        id: "1",
+        name: "đồ chơi",
+        description: "mo ta",
+        slug: "sad",
+        price: 200,
+        image: 100,
+        price_sale: 100,
+        quantity: 1,
+      },
+    ];
+  },
+});

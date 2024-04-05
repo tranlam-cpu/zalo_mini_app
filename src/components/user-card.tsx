@@ -1,12 +1,16 @@
 import React from "react";
 import { GetUserInfoReturns } from "zmp-sdk";
+// import { getUserInfo } from "zmp-sdk/apis";
 import { Avatar, Box, Text } from "zmp-ui";
 
 interface UserProps {
   user: GetUserInfoReturns["userInfo"];
+  // user: async getUserInfo({})
 }
 
 const UserCard: React.FunctionComponent<UserProps> = ({ user }) => {
+  console.log(user);
+
   return (
     <Box flex>
       <Avatar
