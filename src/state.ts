@@ -33,17 +33,17 @@ export const fetchDataToSwiper = selector({
       {
         id: "1",
         name: "swipper 1",
-        src: "https://stc-zmp.zadn.vn/zmp-zaui/images/0e05d63a7a93a6cdff826.jpg",
+        src: "https://www.mykingdom.com.vn/cdn/shop/files/1280x496.png?v=1711937990&width=1200",
       },
       {
         id: "2",
         name: "swipper 2",
-        src: "https://stc-zmp.zadn.vn/zmp-zaui/images/0f7c061caab576eb2fa45.jpg",
+        src: "https://theme.hstatic.net/1000300281/1001160074/14/slide_2_img.jpg?v=187",
       },
       {
         id: "3",
         name: "swipper 3",
-        src: "https://stc-zmp.zadn.vn/zmp-zaui/images/321fb45f18f6c4a89de78.jpg",
+        src: "https://theme.hstatic.net/1000300281/1001160074/14/slide_2_img.jpg?v=187",
       },
     ];
   },
@@ -57,10 +57,10 @@ export const bottomNavigationState = atom({
 export const featureState = atom({
   key: "feature",
   default: [
-    { id: 1, name: "tích điểm mua sắm", src: price, color: "#e6eaf3" },
-    { id: 2, name: "ưu đãi", src: gift, color: "#e6e9de" },
-    { id: 3, name: "đặt hàng", src: cart, color: "#f4f4da" },
-    { id: 4, name: "liên hệ", src: contact, color: "#f3ebde" },
+    { id: 1, name: "Tích điểm", src: price, color: "#e6eaf3" },
+    { id: 2, name: "Ưu đãi", src: gift, color: "#e6e9de" },
+    { id: 3, name: "Đặt hàng", src: cart, color: "#f4f4da" },
+    { id: 4, name: "Liên hệ", src: contact, color: "#f3ebde" },
   ],
 });
 
@@ -78,20 +78,26 @@ export const fetchDataToCategory = selector({
     return [
       {
         id: "1",
-        name: "đồ chơi",
-        src: Toy,
+        name: "Đồ chơi",
+        src: "https://www.mykingdom.com.vn/cdn/shop/files/mykingdom-balo-di-hoc-BC0105_2.jpg?v=1711361626&width=1100",
         url: "#",
       },
       {
         id: "2",
-        name: "gia dụng",
-        src: Toy,
+        name: "Búp bê",
+        src: "https://cdn.shopify.com/s/files/1/0731/6514/4343/files/c90229e743a03b3c77d47c8964faf9e6.jpg?v=1706860874&width=400",
         url: "#",
       },
       {
         id: "3",
-        name: "xích đu em bé",
-        src: Toy,
+        name: "Robot",
+        src: "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/301125_3_f943bb53-7495-49be-a7d1-0cfb0748118b.jpg?v=1707003541&width=400",
+        url: "#",
+      },
+      {
+        id: "4",
+        name: "Lắp ráp",
+        src: "https://cdn.shopify.com/s/files/1/0731/6514/4343/products/lego-42134_3.jpg?v=1706993506&width=400",
         url: "#",
       },
     ];
