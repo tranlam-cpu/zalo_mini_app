@@ -10,30 +10,34 @@ import {
   Box,
 } from "zmp-ui";
 import { useRecoilValue } from "recoil";
-import { swiperState, featureState, categoryState } from "../state";
+import { swiperState, featureState, categoryState, productState } from "../state";
 import { useLoadSwiper } from "../utils/swiperService";
 import UserCard from "../components/user-card";
 import Feature from "../components/feature";
 import Categories from "../components/category";
 import Product from "../components/product";
 import { useLoadCateogry } from "../utils/categoryService";
+import { useLoadProduct } from "../utils/productService";
 
 const HomePage: React.FunctionComponent = () => {
   // const user = useRecoilValue(userState);
   //state selection
   const swiper = useRecoilValue(swiperState);
   const categories = useRecoilValue(categoryState);
+  const products = useRecoilValue(productState);
   // const navigate = useNavigate();
   //get state from service
   const loadSwiper = useLoadSwiper();
   const loadCategory = useLoadCateogry();
-
+  const  loadProduct = useLoadProduct();
   const features = useRecoilValue(featureState);
+
 
   useEffect(() => {
     loadSwiper();
     loadCategory();
-  }, [loadSwiper, loadCategory]);
+    loadProduct();
+  }, [loadSwiper, loadCategory,loadProduct]);
 
   return (
     <>
@@ -47,7 +51,11 @@ const HomePage: React.FunctionComponent = () => {
           {swiper?.map((data: any) => {
             return (
               <Swiper.Slide key={data.id}>
-                <img className="rounded-none" src={data.src} alt={data.name} />
+                <img
+                  className="rounded-none object-cover h-[25vh]"
+                  src={data.src}
+                  alt={data.name}
+                />
               </Swiper.Slide>
             );
           })}
@@ -58,7 +66,7 @@ const HomePage: React.FunctionComponent = () => {
         <Input.Search
           label="Label"
           helperText="Helper text"
-          placeholder="tìm kiếm"
+          placeholder="Tìm kiếm..."
           onSearch={(text) => console.log(text)}
         />
       </div>
@@ -81,12 +89,9 @@ const HomePage: React.FunctionComponent = () => {
       </div>
 
       <div className="mx-5 grid grid-cols-2 justify-items-center gap-4">
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+      {products?.map((value: any) => {
+        return <Product key={value.id} products={value} />;
+      })}
       </div>
     </>
   );

@@ -10,7 +10,11 @@ const Categories = ({ category }) => {
   return (
     <div className="p-2 break-words" onClick={() => navigate(urlPath)}>
       <div className="w-20 h-14 mb-1">
-        <img src={category.src} className="w-full h-full" alt="sd" />
+        <img
+          src={category.src}
+          className="w-full h-full object-cover"
+          alt="sd"
+        />
       </div>
       <p className="text-center font-semibold ps-2">{category.name}</p>
     </div>
