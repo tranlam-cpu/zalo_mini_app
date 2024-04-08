@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import price from "../static/images/price.png";
 
 interface Feature {
-  id: number;
+  id: string;
   name: string;
   src: string;
   color: string;

@@ -1,7 +1,7 @@
 import { useRecoilCallback } from "recoil";
 import { productState, fetchDataToProduct } from "../state";
 
-export function useLoadCateogry() {
+export function useLoadProduct() {
   return useRecoilCallback(({ snapshot, set }) => () => {
     const loadable = snapshot.getLoadable(fetchDataToProduct);
 
